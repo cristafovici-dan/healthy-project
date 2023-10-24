@@ -4,13 +4,13 @@ import java.util.Date;
 
 import jakarta.persistence.*;
 
-@Entity()
+@Entity(name = "PRODUCT")
 public class ProductEntity  {
   @Id()
   @GeneratedValue(strategy =  GenerationType.IDENTITY)
   private Long id;
 
-  @Column(name = "name")
+  @Column(name = "name", nullable = false)
   private String name;
 
   @Column(name = "nutritional_info", columnDefinition = "TEXT" )
